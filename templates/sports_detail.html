@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+
+  
+  
+    <h3>{{sports.title_field}}</h3>
+    <h3>{{sports.purchaser_field}}</h3>
+    <p>{{sports.description_field}}</p>
+    <a href="{% url 'sports_update' sports.pk %}">+ Update sports</a>
+    <a href="{% url 'sports_delete' sports.pk %}">+ Delete sports</a>
+
+{% endblock content %}

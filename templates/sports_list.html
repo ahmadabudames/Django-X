@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<a href="{% url 'sports_create' %}">+ New sports</a>
+<ul>
+  {% for sports in sports %}
+  <li>
+    <a href="{% url 'sports_detail' snack.pk %}">{{ sports.title_field}}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
